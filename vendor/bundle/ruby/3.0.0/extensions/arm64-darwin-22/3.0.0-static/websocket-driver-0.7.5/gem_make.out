@@ -1,0 +1,19 @@
+current directory: /Users/012tmpind/Documents/ror_practice/student_app/vendor/bundle/ruby/3.0.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+/Users/012tmpind/.rubies/ruby-3.0.5/bin/ruby -I /Users/012tmpind/.rubies/ruby-3.0.5/lib/ruby/site_ruby/3.0.0 extconf.rb
+creating Makefile
+
+current directory: /Users/012tmpind/Documents/ror_practice/student_app/vendor/bundle/ruby/3.0.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20230203-9007-f9oy2n sitelibdir\=./.gem.20230203-9007-f9oy2n clean
+
+current directory: /Users/012tmpind/Documents/ror_practice/student_app/vendor/bundle/ruby/3.0.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20230203-9007-f9oy2n sitelibdir\=./.gem.20230203-9007-f9oy2n
+compiling websocket_mask.c
+linking shared-object websocket_mask.bundle
+ld: warning: -undefined dynamic_lookup may not work with chained fixups
+
+current directory: /Users/012tmpind/Documents/ror_practice/student_app/vendor/bundle/ruby/3.0.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20230203-9007-f9oy2n sitelibdir\=./.gem.20230203-9007-f9oy2n install
+/usr/bin/install -c -m 0755 websocket_mask.bundle ./.gem.20230203-9007-f9oy2n
+
+current directory: /Users/012tmpind/Documents/ror_practice/student_app/vendor/bundle/ruby/3.0.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20230203-9007-f9oy2n sitelibdir\=./.gem.20230203-9007-f9oy2n clean

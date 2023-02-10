@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Students</h1>
+<div id="carouselExampleIndicators carousal-conatiner" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://images.unsplash.com/photo-1673447111351-d83b5376a9d1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDg0fF84ekZIdWhSaHlvfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://images.unsplash.com/photo-1625580916836-1badf2c15b32?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8a3Jpc2huYXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://images.unsplash.com/photo-1611307742746-43cbea512c37?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bmF0dXJlJTIwbGFuZHNjYXBlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>  
+
+<h4>List of Students</h4>
+
+
+
+<table class="table-default table-striped">
+  <thead>
+    <tr>
+      <th class="table-col">Name</th>
+      <th class="table-col">Age</th>
+      <th class="table-col">Address</th>
+      <th class="table-col">Mobile no</th>
+      <th class="table-col">Picture</th>
+      <th class="table-col" colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @students.each do |student| %>
+      <tr>
+        <td class="table-col"><%= student.name %></td>
+        <td class="table-col"><%= student.age %></td>
+        <td class="table-col"><%= student.address %></td>
+        <td class="table-col"><%= student.mobile_no %></td>
+        <td class="table-col"><%= image_tag student.picture_url, width: '50%', class: 'profile_image' if student.picture.present? %></td>
+        <td ><%= link_to 'Show', student %></td>
+        <td ><%= link_to 'Edit', edit_student_path(student) %></td>
+        <td ><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to  'New Student', new_student_path %>
